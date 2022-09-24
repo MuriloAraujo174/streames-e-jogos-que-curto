@@ -1,0 +1,158 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background-image: url("/img/Fundo.jpg");
+background-position: top center;
+background-size: 100% auto;
+background-repeat: no-repeat;
+background-color: #121214;
+}
+
+body * {
+font-family: 'Inter', sans-serif;
+line-height: 160%;
+}
+
+header {
+margin-top: 32px;
+height: calc(120 + 32);
+}
+
+header div {
+width: 120px;
+margin: auto;
+background-image: linear-gradient(90deg, #1105fa 0%, #1fe8a2 50.52%, #f4e029 100%);
+border-radius: 50%;
+display: flex;
+padding: 4px;
+transition: transform .3s;
+}
+
+header div:hover {
+transform: scale(1.1);
+}
+
+header img {
+width: 100%;
+border-radius: 50%;
+}
+
+main {
+max-width: 580px;
+width: 90%;
+margin: 32px auto;
+display: grid;
+gap: 24px;
+}
+
+ul {
+list-style: none;
+}
+
+section {
+color: white;
+background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+padding-top: 4px;
+border-radius: 10px;
+}
+
+section div {
+background-color: #2A2634;
+padding: 32px;
+padding-top: 24px;
+border-radius: 8px;
+}
+
+section h2 {
+letter-spacing: -0.47px;
+}
+
+section p {
+letter-spacing: -0.18px;    
+color: #A1A1AA;
+}
+
+section ul {
+display: flex;
+flex-wrap: wrap;
+gap: 16px;
+margin-top: 24px;
+}
+
+section ul li {
+transition: transform .3s;
+}
+
+section ul li:hover {
+transform: scale(1.1);
+}
+
+.games-list img {
+width: 90px;
+border-radius: 8px;
+}
+
+.channel-list img {
+border-radius: 50%;
+width: 70px;
+border: 2px solid #443E54;
+}
+
+/* animetion */
+
+header div {
+animation: fromtop .7s .4s backwards;
+}
+
+main section {
+animation: cards .7s backwards;
+} 
+
+main section:nth-child(1){
+animation-delay: .2;
+}
+main section:nth-child(2){
+animation-delay: .4s;
+}
+main section:nth-child(3){
+animation-delay: .7s;
+}
+
+
+@keyframes fromtop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cards {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes color {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
